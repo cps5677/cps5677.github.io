@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>oy666的个人主页</title>
+<meta name="description" content="oy666的个人主页。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-49 -4 180 188'%3E%3Crect x='-49' y='-4' width='180' height='188' rx='36' fill='%23C4E4FF'/%3E%3Cg fill='none' stroke='%23DE4008' stroke-width='20' stroke-linecap='round'%3E%3Ccircle cx='41' cy='98' r='32'/%3E%3Cpath d='M9 98C9 58 30 32 62 24'/%3E%3C/g%3E%3C/svg%3E">
+<style>
+/* 颜色：想换配色只改这里 */
+:root{
+  color-scheme: light;
+  --bg:    #C4E4FF;   /* 背景：天蓝 */
+  --ink:   #0B2545;   /* 文字：藏青 */
+  --muted: #3F5F86;   /* 次要文字 */
+  --hot:   #DE4008;   /* 三个 6 和链接下划线：橙红 */
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    color-scheme: dark;
+    --bg:    #081C36;
+    --ink:   #D6EBFF;
+    --muted: #8FB0D6;
+    --hot:   #FF7A3D;
+  }
+}
+
+*{ box-sizing: border-box; }
+html{ -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body{
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  padding: clamp(1.25rem, 4vw, 3rem);
+  background: var(--bg);
+  color: var(--ink);
+  font-family: ui-rounded, -apple-system, BlinkMacSystemFont, "PingFang SC", "HarmonyOS Sans SC", "Noto Sans SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  overflow-x: hidden;
+  overflow-x: clip;
+}
+main{ align-self: center; }
+
+/* 名字：五个字形都是手画的线条，o 和 6 共用同一个圆 */
+.mark{ width: max-content; max-width: 100%; }
+.word{
+  display: flex;
+  gap: .078em;
+  margin: 0;
+  font-size: min(33vw, 38vh, 22rem);
+  line-height: 1;
+}
+.word svg{
+  display: block;
+  height: 1em;
+  width: auto;
+  overflow: visible;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 18;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.six{
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: .06em;
+  background: none;
+  font: inherit;
+  color: var(--hot);
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  transform: rotate(calc(var(--turns, 0) * 1turn + var(--tilt, 0deg)));
+  transition: transform .7s cubic-bezier(.34, 1.4, .64, 1);
+}
+.six:hover{ --tilt: -9deg; }
+.six:focus-visible,
+a:focus-visible{ outline: 3px solid var(--ink); outline-offset: 4px; }
+@media (prefers-reduced-motion: reduce){ .six{ transition: none; } }
+
+.tally{
+  margin: .5rem 0 0;
+  text-align: right;
+  font-size: .9375rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.intro{
+  max-width: 28em;
+  margin: clamp(1.5rem, 4vh, 2.75rem) 0 0;
+  font-size: clamp(1.125rem, 2.2vw, 1.375rem);
+}
+.intro p{ margin: 0; }
+.intro p:first-child{ font-weight: 600; }
+.links{
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem 1.5rem;
+  margin: 1.1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.links a{
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--hot);
+  text-decoration-thickness: .14em;
+  text-underline-offset: .28em;
+}
+.links a:hover{ color: var(--hot); }
+footer{ padding-top: 2rem; font-size: .875rem; color: var(--muted); }
+.sr{ position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+</style>
+</head>
+<body>
+
+<!-- 数字 6 的字形，下面三个按钮共用 -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="six" viewBox="0 0 82 180">
+    <circle cx="41" cy="88" r="32"/>
+    <path d="M9 88C9 48 30 22 62 14"/>
+  </symbol>
+</svg>
+
+<main>
+  <div class="mark">
+    <h1 class="word">
+      <span class="sr">oy666</span>
+      <svg viewBox="0 0 82 180" aria-hidden="true"><circle cx="41" cy="88" r="32"/></svg>
+      <svg viewBox="0 0 78 180" aria-hidden="true"><path d="M9 56L39 120M69 56L17 167"/></svg>
+      <button class="six" type="button" aria-label="扣个 6"><svg viewBox="0 0 82 180" aria-hidden="true"><use href="#six"/></svg></button>
+      <button class="six" type="button" aria-label="扣个 6"><svg viewBox="0 0 82 180" aria-hidden="true"><use href="#six"/></svg></button>
+      <button class="six" type="button" aria-label="扣个 6"><svg viewBox="0 0 82 180" aria-hidden="true"><use href="#six"/></svg></button>
+    </h1>
+    <p class="tally" id="tally" aria-live="polite">点一下 6 试试。</p>
+  </div>
+
+  <!-- 【改这里】自我介绍 -->
+  <div class="intro">
+    <p>欢迎来到 oy666 的个人主页。</p>
+    <p>这里写一句话介绍自己。</p>
+  </div>
+
+  <!-- 【改这里】链接：把地址和文字换成你自己的 -->
+  <ul class="links">
+    <li><a href="https://github.com/">GitHub</a></li>
+    <li><a href="mailto:you@example.com">you@example.com</a></li>
+  </ul>
+</main>
+
+<footer>© 2026 oy666</footer>
+
+<script>
+// 点一下 6：它转一圈，下面的计数加一
+(function () {
+  var tally = document.getElementById('tally');
+  var special = { 6: '6 个 6，六六大顺。', 66: '66 个 6，是真的溜。', 666: '666 个 6。你赢了。' };
+  var n = 0;
+  Array.prototype.forEach.call(document.querySelectorAll('.six'), function (btn) {
+    var turns = 0;
+    btn.addEventListener('click', function () {
+      turns += 1;
+      n += 1;
+      btn.style.setProperty('--turns', turns);
+      tally.textContent = special[n] || '已经扣了 ' + n + ' 个 6。';
+    });
+  });
+})();
+</script>
+</body>
+</html>
