@@ -1,2 +1,116 @@
-例子这是一个例子
-zhehsilizi1
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>胜哥的个人主页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Helvetica Neue', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            max-width: 800px;
+            width: 100%;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        .subtitle {
+            color: #667eea;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        .section {
+            margin-bottom: 25px;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+        p {
+            color: #555;
+            line-height: 1.8;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .skill {
+            background: #f0f2ff;
+            color: #667eea;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+        .contact a {
+            color: #667eea;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .contact a:hover {
+            text-decoration: underline;
+        }
+        .emoji {
+            font-size: 1.3em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>你好，我是胜哥 <span class="emoji">👋</span></h1>
+        <p class="subtitle">数据科学与大数据技术专业学生</p>
+
+        <div class="section">
+            <h2>关于我</h2>
+            <p>我是一名对大数据和人工智能充满热情的本科生，专注于学习数据工程、AI 应用开发和 Web 技术。</p>
+        </div>
+
+        <div class="section">
+            <h2>技能</h2>
+            <div class="skills">
+                <span class="skill">Python</span>
+                <span class="skill">SQL</span>
+                <span class="skill">Hadoop</span>
+                <span class="skill">Spark</span>
+                <span class="skill">Machine Learning</span>
+                <span class="skill">HTML/CSS</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>项目</h2>
+            <p>🚧 项目展示即将上线，敬请期待...</p>
+        </div>
+
+        <div class="section">
+            <h2>联系我</h2>
+            <p class="contact">
+                <a href="https://github.com/cps5677">GitHub</a>
+                <a href="mailto:your@email.com">Email</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
